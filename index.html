@@ -2,10 +2,50 @@
 <html>
 <head>
   <title>pawprnt flatpak repo</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #cdd6e2;
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    h1 { color: #4b89ef; }
+    code, pre {
+      background: #1e1e1e;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 8px;
+    }
+    a { color: #4b89ef; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.5rem 1rem; border-bottom: 1px solid #1e1e1e; }
+    th { color: #4b89ef; }
+  </style>
 </head>
 <body>
   <h1>pawprnt flatpak repo</h1>
-  <p>add a remote to install apps:</p>
-  <pre>flatpak remote-add --user forager https://pawprnt.github.io/flatpak-repo/forager/repo</pre>
+  <p>a shared flatpak repository for pawprnt apps.</p>
+
+  <h2>install</h2>
+  <pre>flatpak remote-add --user pawprnt https://pawprnt.github.io/flatpak-repo/repo</pre>
+  <p>then install any available app:</p>
+  <pre>flatpak install --user pawprnt io.github.pawprnt.forager</pre>
+
+  <h2>available apps</h2>
+  <table>
+    <tr><th>app</th><th>app id</th><th>description</th></tr>
+    <tr><td>forager</td><td>io.github.pawprnt.forager</td><td>steam-style game launcher for your local library</td></tr>
+  </table>
+
+  <h2>running</h2>
+  <pre>flatpak run io.github.pawprnt.forager</pre>
 </body>
 </html>
