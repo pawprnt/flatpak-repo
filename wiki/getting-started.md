@@ -1,26 +1,25 @@
 # getting started
 
-forager is a chill game launcher for your local library.
-steam-like vibes, space theme aesthetics, no subscription fees.
+the pawprnt flatpak repo is a shared repository for pawprnt apps. add the remote once, install any app.
 
-## usage
+## install a remote
 
-1. point it at your games folder
-2. relax while it scans
-3. click a game and hit play
+```
+flatpak remote-add --user pawprnt https://pawprnt.github.io/flatpak-repo/repo
+```
 
-that's it. it detects steam games, minecraft instances, and standalone titles automatically.
+## install an app
 
-## what it supports
+```
+flatpak install --user pawprnt io.github.pawprnt.forager
+```
 
-- steam games (installed and owned)
-- minecraft instances
-- standalone windows games (via proton)
-- standalone linux games
+## run an app
 
-## where to go from here
+```
+flatpak run io.github.pawprnt.forager
+```
 
-- [install](install.md) — how to get forager running
-- [features](features.md) — everything forager can do
-- [configuration](configuration.md) — tweak the settings
-- [library layout](library-layout.md) — how to organize your games folder
+## available apps
+
+- [forager](install.md#forager) — steam-style game launcher for your local library
